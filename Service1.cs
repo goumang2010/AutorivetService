@@ -78,7 +78,9 @@ namespace AutorivetService
                         await ftppd.UpdateFTPPartDB((string)pp);
 
                    }
-
+                    //Clean backup files
+                    var cleanpath = GoumangToolKit.localMethod.GetConfigValue("InfoPath");
+                    BackupOperation.CleanBackup(cleanpath);
 
                 }
 
